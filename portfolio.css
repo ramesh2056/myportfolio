@@ -55,12 +55,11 @@ nav#navbar li {
 nav#navbar a {
     color: #fff;
     text-decoration: none;
-    font-size: 3vh; /* Increase icon font size using vh */
+    font-size: 3vh; /* Use vh for font size */
     padding: 1.5vh; /* Use vh for padding */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Kanit', sans-serif; /* Updated font for attractiveness */
 }
 
 nav#navbar a:hover, nav#navbar a:focus {
