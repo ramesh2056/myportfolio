@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+/* General body and HTML styles */
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal overflow at the HTML level */
+    font-size: 16px; /* Base font size for rem units */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the height of the viewport */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: url('b19.jpeg') no-repeat center center fixed; 
+    background-size: cover;
+    overflow-x: hidden; /* Prevent horizontal scrollbar due to overflow */
+}
+
+/* Header and Navigation Bar */
+header {
+    background: url('navigation3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    position: fixed;  /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;  /* Ensure the header is above other content */
+}
+
+nav#navbar {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar li {
+    margin: 0 2vw; /* Use vw for margin */
+}
+
+nav#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3vh; /* Increase icon font size using vh */
+    padding: 1.5vh; /* Use vh for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif; /* Updated font for attractiveness */
+}
+
+nav#navbar a:hover, nav#navbar a:focus {
+    background-color: #575757;
+    border-radius: 1vw; /* Use vw for border radius */
+    transition: background-color 0.3s;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.intro {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal alignment */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box; /* Include padding in width calculations */
+    margin-top: 10vh; /* Add top margin to avoid overlap with the header */
+}
+
+.content {
+    flex: 1; /* Make text take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start */
+    max-width: 50%; /* Ensure equal width for text */
+    padding-left: 4vw; /* Shift paragraph to the right */
+}
+
+.welcome-text {
+    font-family: 'Poetsen One', sans-serif;
+    align-self: center; /* Center the welcome text within the column */
+    color: wheat; /* Change the text color to gold */
+    text-shadow: 0.2vh 0.2vh 0.4vh #000000; /* Use vh for text shadow */
+    font-weight: 300;
+    margin: 2vh 2vw; /* Use vh and vw for margin */
+    text-align: center; /* Center align the text */
+    font-size: 4vh; /* Use vh for font size */
+    animation: fadeIn 2s ease-out;
+}
+
+.intro-text {
+    font-family: 'Merriweather', serif; /* Updated font for more appealing look */
+    color: wheat;
+    text-shadow: 0.2vh 0.2vh 0.4vh #000000; /* Use vh for text shadow */
+    font-weight: 300;
+    margin: 1vh 2vw; /* Use vh and vw for margin */
+    text-align: justify; /* Justify text alignment */
+    line-height: 1.6;
+    font-size: 2vh; /* Use vh for font size */
+    animation: fadeIn 2s ease-out;
+}
+
+.image-container {
+    flex: 1; /* Make image take equal space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%; /* Ensure equal width for image */
+}
+
+.image-container img {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 1vw; /* Use vw for border radius */
+    box-shadow: 0 1vh 2vh rgba(26, 20, 20, 0.5); /* Use vh for box shadow */
+    animation: scaleIn 2s ease-out;
+    display: block; /* Ensure images are block level to respect max-width */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: #fff;
+    text-align: center;
+    padding: 2vh; /* Use vh for padding */
+    width: 100%;
+    margin-top: auto;
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+
+    .intro {
+        flex-direction: column;
+        padding: 0 5%; /* Use percentage for padding */
+        margin-top: 12vh; /* Add more top margin to avoid overlap with the header */
+    }
+
+    .content, .image-container {
+        max-width: 100%; /* Use the full width */
+        padding: 0; /* No additional padding */
+    }
+
+    .welcome-text, .intro-text {
+        font-size: 2.5vh; /* Use vh for font size */
+        margin: 1vh 2vw; /* Use vh and vw for margin */
+        padding: 0 2vw; /* Use vw for padding */
+        line-height: 1.2; /* Reduce line spacing */
+    }
+
+    .image-container {
+        width: 100%; /* Ensure the container is square */
+        max-width: 50vw; /* Use vw for max-width */
+        height: auto;
+        margin: 2vh auto; /* Use vh for margin */
+    }
+
+    img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .main-content {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2vh; /* Use vh for padding */
+    }
+
+    .welcome-text, .intro-text {
+        font-size: 2.5vh; /* Use vh for font size */
+        margin-top: 2vh; /* Use vh for margin-top */
+        text-align: justify; /* Justify text alignment */
+        padding: 0 4vw; /* Use vw for padding */
+        line-height: 1.2; /* Reduce line spacing */
+    }
+
+    .image-container {
+        width: 80vw; /* Use vw for responsiveness */
+        max-width: 50vw; /* Use vw for max-width */
+        height: auto;
+        margin-top: 2vh; /* Use vh for margin-top */
+    }
+
+    img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .welcome-text, .intro-text {
+        font-size: 3vh; /* Use vh for font size */
+        text-align: justify; /* Justify text alignment */
+    }
+
+    .image-container {
+        width: 60vw; /* Use vw for responsiveness */
+        max-width: 40vw; /* Use vw for max-width */
+        height: auto;
+    }
+
+    img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .welcome-text, .intro-text {
+        font-size: 2.5vh; /* Use vh for font size */
+    }
+
+    .image-container {
+        width: 50vw; /* Adjust the size of the image container */
+        max-width: 30vw; /* Use vw for max-width */
+        height: auto;
+    }
+
+    img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 1441px) {
+    .intro {
+        flex-direction: row; /* Ensure horizontal alignment */
+        justify-content: space-evenly; /* Space elements evenly */
+    }
+
+    .welcome-text, .intro-text {
+        font-size: 2.5vh; /* Use vh for font size */
+        text-align: justify; /* Justify text alignment */
+    }
+
+    .image-container {
+        width: 40vw; /* Use vw for responsiveness */
+        max-width: 25vw; /* Use vw for max-width */
+        height: auto;
+    }
+
+    img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 600px) {
+    .welcome-text {
+        font-size: 2vh; /* Use vh for font size */
+        margin-top: 2vh; /* Add more top margin to avoid overlap with the header */
+        text-align: justify; /* Justify text alignment */
+        padding: 0 4vw; /* Use vw for padding */
+        line-height: 1.2; /* Reduce line spacing */
+        justify-content: center;
+    }
+
+    .intro-text {
+        font-size: 2vh; /* Use vh for font size */
+        margin-top: 1vh; /* Add more top margin to avoid overlap with the header */
+        text-align: justify; /* Justify text alignment */
+        padding: 0 4vw; /* Use vw for padding */
+        line-height: 1.2; /* Reduce line spacing */
+        justify-content: center;
+        font-size: small;
+    }
+
+    .image-container {
+        width: 80vw; /* Use vw for responsiveness */
+        max-width: 50vw; /* Use vw for max-width */
+        height: auto;
+        margin-top: 2vh; /* Use vh for margin-top */
+    }
+
+    img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

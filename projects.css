@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+
+/* General body and HTML styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+    font-family: 'Poppins', sans-serif;
+    background: #101820;  /* Dark gradient background */
+}
+
+/* Header and Navigation Bar */
+header {
+    background: url('navigation3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    position: fixed;  /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;  /* Ensure the header is above other content */
+}
+
+nav#navbar {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar li {
+    margin: 0 2vw; /* Use vw for margin */
+}
+
+nav#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3vh; /* Use vh for font size */
+    padding: 1.5vh; /* Use vh for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#navbar a:hover, nav#navbar a:focus {
+    background-color: #575757;
+    border-radius: 1vw; /* Use vw for border radius */
+    transition: background-color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    background: url('b12.webp');
+    background-size: cover;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18vw; /* Use vw for width */
+    border-radius: 2vw;  /* Use vw for border radius */
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.1); /* Use vh for box shadow */
+    position: absolute;
+    top: 12vh;  /* Use vh for top margin */
+    left: 1vw; /* Use vw for left margin */
+    right: auto; /* Ensure right is auto */
+    transition: top 0.3s;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 12vw; /* Use vw for width */
+    height: 12vw; /* Use vw for height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 50%; /* Optional: to make it a circular profile picture */
+    margin: 0 auto; /* Center the picture by auto margins */
+}
+
+.sidebar h2 {
+    color: #090909;
+    font-family: 'Merriweather', serif; /* Distinct font for sidebar headings */
+    font-size: 3vh; /* Use vh for font size */
+    text-align: center;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+.sidebar p {
+    color: #050505;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8vh; /* Use vh for font size */
+    text-align: justify;
+    margin: 1vh 0; /* Use vh for margin */
+}
+/* Project and Publication */
+.project, .publication {
+    color: #000000;
+    background: #FBEAEB; /* Light background color */
+    margin-top: 2vh; 
+    width: 77%; 
+    margin-left: 20vw; 
+    margin-right: 5vw; 
+    margin-bottom: 1vh; 
+    padding: 2vh; 
+    text-align: justify;
+    border-radius: 1vw; 
+    font-size: 2.5vh; 
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.project.active, .publication.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 5vh; /* Use vh for font size */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffe0;
+    border-bottom: 3px solid yellow;
+    padding-bottom: 1vh; /* Use vh for padding */
+    margin-top: 12vh; /* Use vh for top margin */
+    margin-left: 20vw; /* Adjusted to align with projects and publications */
+    margin-right: 5vw; /* Use vw for right margin */
+    width: 78.5%; /* Use vw for width */
+}
+
+.section-title2 {
+    font-size: 5vh; /* Use vh for font size */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffe0;
+    border-bottom: 3px solid yellow;
+    padding-bottom: 1vh; /* Use vh for padding */
+    margin-top: 1vh; /* Use vh for top margin */
+    margin-left: 20vw; /* Adjusted to align with projects and publications */
+    margin-right: 5vw; /* Use vw for right margin */
+    width: 78.5%; /* Use vw for width */
+}
+
+.section-title i, .section-title2 i {
+    margin-right: 0.5vw; /* Adjust spacing between icon and text */
+    font-style: normal; /* Ensure the icon does not inherit italic style */
+}
+
+/* Custom classes */
+.project-heading {
+    font-family: "Lora", serif; /* Attractive font */
+    font-size: 2.5vh;
+    font-weight: bold;
+    margin-bottom: 1vh; /* Reduce space below heading */
+}
+
+.abstract {
+    font-family: 'Lora', serif; /* Attractive font */
+    margin-top: 0.5vh; /* Reduce space above abstract */
+    margin-bottom: 0.5vh; /* Reduce space below abstract */
+}
+
+.doi {
+    margin: 0; /* Remove margin to reduce space */
+    font-family: 'Lora', serif; /* Attractive font */
+    font-size: 2vh; /* Use vh for font size */
+}
+
+.author {
+    font-family: 'Lora', serif; /* Attractive font */
+    font-size: 2vh; /* Use vh for font size */
+    margin-top: 0.5vh; /* Reduce space above author */
+    font-weight: bold;
+    margin-bottom: 0.5vh; /* Reduce space below author */
+}
+
+.year {
+    font-family: 'Lora', serif; /* Attractive font */
+    font-size: 2vh; /* Use vh for font size */
+    margin-top: 0.5vh; /* Reduce space above year */
+    margin-bottom: 0.5vh; /* Reduce space below year */
+}
+
+/* Media query for screen sizes between 1440px and 1024px */
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .sidebar {
+        width: 95.2%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar h2, .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify;
+    }
+
+    .project, .publication {
+        margin-top: 2vh; /* Use vh for top margin */
+        width: 93%; /* Full width minus a small margin */
+        margin-left: 2vw;
+        text-align: justify;
+        margin-right: 5vw; /* Use vw for right margin */
+        margin-bottom: 2vh; /* Use vh for bottom margin */
+        padding: 2vh; /* Use vh for padding */
+        border-radius: 1vw; /* Use vw for border radius */
+        font-size: 2.5vh; /* Use vh for font size */
+    }
+
+    .section-title {
+        margin-top: 10vh;
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 5vw; /* Use vw for right margin */
+        width: 95%; /* Use vw for width */
+    }
+    .section-title2 {
+        margin-top: 2vh;
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 5vw; /* Use vw for right margin */
+        width: 95%; /* Use vw for width */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+
+/* Media query for screen sizes between 1024px and 900px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .sidebar {
+        width: 95.5%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1.2vw; /* Use vw for left margin */
+        margin-right: 5vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar h2, .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify;
+    }
+
+    .project, .publication {
+        margin-top: 2vh; /* Use vh for top margin */
+        width: 93%; /* Full width minus a small margin */
+        margin-left: 2vw;
+        text-align: justify;
+        margin-right: 5vw; /* Use vw for right margin */
+        margin-bottom: 2vh; /* Use vh for bottom margin */
+        padding: 2vh; /* Use vh for padding */
+        border-radius: 1vw; /* Use vw for border radius */
+        font-size: 2.5vh; /* Use vh for font size */
+    }
+
+    .section-title {
+        margin-top: 12vh;
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 2vw; /* Use vw for right margin */
+        width: 95%; /* Full width minus margins */
+    }
+    .section-title2 {
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 4vh;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 2vw; /* Use vw for right margin */
+        width: 95%; /* Full width minus margins */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+
+/* Media query for screen sizes between 768px and 500px */
+@media (max-width: 768px) and (min-width: 500px) {
+    .sidebar {
+        width: 95%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 11vh; /* Use vh for top margin */
+        margin-left: 1.3vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+        font-size: medium;
+    }
+
+    .project, .publication {
+        margin-top: 2vh; /* Use vh for top margin */
+        width: 91%; /* Full width minus a small margin */
+        margin-left: 2vw;
+        text-align: justify;
+        margin-right: 2vw; /* Use vw for right margin */
+        margin-bottom: 2vh; /* Use vh for bottom margin */
+        padding: 2vh; /* Use vh for padding */
+        border-radius: 1vw; /* Use vw for border radius */
+        font-size: 2.5vh; /* Use vh for font size */
+    }
+
+    .section-title {
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 12vh;
+        margin-bottom: 1vh;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 2vw; /* Use vw for right margin */
+        width: 95%; /* Full width minus margins */
+    }
+    .section-title2 {
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 2vh;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 2vw; /* Use vw for right margin */
+        width: 95%; /* Full width minus margins */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+
+/* Media query for screen sizes below 500px */
+@media (max-width: 500px) {
+    .sidebar {
+        width: 95%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 2vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 30vw; /* Use vw for width */
+        height: 30vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 0 auto; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+        font-size: medium;
+    }
+
+    .project, .publication {
+        margin-top: 1vh; /* Use vh for top margin */
+        width: 90%; /* Full width minus a small margin */
+        margin-left: 2vw;
+        text-align: justify;
+        margin-right: 2vw; /* Use vw for right margin */
+        margin-bottom: 2vh; /* Use vh for bottom margin */
+        padding: 2vh; /* Use vh for padding */
+        border-radius: 1vw; /* Use vw for border radius */
+        font-size: 2.5vh; /* Use vh for font size */
+    }
+
+    .section-title {
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 12vh;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 2vw; /* Use vw for right margin */
+        width: 95%; /* Full width minus margins */
+    }
+    .section-title2 {
+        font-size: 5vh; /* Use vh for font size */
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        margin-top: 4vh;
+        margin-left: 2vw; /* Adjusted to align with projects and publications */
+        margin-right: 2vw; /* Use vw for right margin */
+        width: 95%; /* Full width minus margins */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}

@@ -1,0 +1,722 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+    font-family: 'Roboto', sans-serif;
+    background: #101820;  /* Dark gradient background */
+}
+
+/* Header and Navigation Bar */
+header {
+    background: url('navigation3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    position: fixed;  /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;  /* Ensure the header is above other content */
+}
+
+nav#navbar {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar li {
+    margin: 0 2vw; /* Use vw for margin */
+}
+
+nav#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3vh; /* Increase icon font size using vh */
+    padding: 1.5vh; /* Use vh for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif; /* Updated font for attractiveness */
+}
+
+nav#navbar a:hover, nav#navbar a:focus {
+    background-color: #575757;
+    border-radius: 1vw; /* Use vw for border radius */
+    transition: background-color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    background: url('b12.webp');
+    background-size: cover;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18vw; /* Use vw for width */
+    border-radius: 2vw;  /* Use vw for border radius */
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.1); /* Use vh for box shadow */
+    position: absolute;
+    top: 12vh;  /* Use vh for top margin */
+    left: 1vw; /* Use vw for left margin */
+    transition: top 0.3s;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 12vw; /* Use vw for width */
+    height: 12vw; /* Use vw for height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 50%; /* Optional: to make it a circular profile picture */
+    margin: 0 auto; /* Center the picture by auto margins */
+}
+
+.sidebar h2 {
+    color: #090909;
+    font-family: 'Merriweather', serif; /* Distinct font for sidebar headings */
+    font-size: 3vh; /* Use vh for font size */
+    text-align: center;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+.sidebar p {
+    color: #050505;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8vh; /* Use vh for font size */
+    text-align: justify;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+main {
+    float: left;
+    width: 83%; /* Main content area width - Adjust if you change the sidebar width */
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    margin-left: 18vw; /* Adjusted to align with the sidebar */
+    padding-top: 12vh; /* Align the top padding with the sidebar */
+}
+
+.section-title {
+    font-size: 5vh; /* Use vh for font size */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffe0;
+    margin-bottom: 1vh; /* Use vh for margin */
+    margin-top: 0; /* Reduced top margin */
+    padding: 0; /* Removed padding */
+    border-bottom: 0.3vh solid gold; /* Use vh for border bottom */
+    text-align: justify; /* Justify text */
+    padding-left: 0vw; /* Adjust left padding to align with content inside the main container */
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes per row */
+    gap: 2vw; /* Increased gap for better spacing */
+    justify-items: center;
+    background: #181818; /* Darker background for better contrast */
+    border-radius: 1vw; /* Add border radius */
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3); /* Add shadow */
+    margin: 0 auto; /* Center the gallery */
+    width: 100%; /* Adjust the width to match the full width minus padding */
+}
+
+.project-thumbnail {
+    background: #19222d; /* More appealing dark blue background */
+    background-size: cover;
+    color: #fff;
+    border-radius: 1vw; /* Use vw for border radius */
+    border: 0.1vh solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif; /* Updated font for the thumbnails */
+}
+
+.project-thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.project-type {
+    color: rgb(255, 255, 255);
+    font-size: 1.5vh; /* Use vh for font size */
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline; /* Add underline to project type */
+    text-align: left; /* Left-align text */
+    margin: 1vh 0 1.5vh 1vw; /* Margin top and bottom */
+    align-self: flex-start; /* Align to the top-left */
+}
+
+.project-title-container {
+    background: #7D8488; /* Gradient background for 3D effect */
+    width: 100%; /* Make the stripe full width */
+    margin-top: -0.8vh;
+    margin-bottom: 0.5vh;
+    padding: 0.5vh 0; /* Padding for the stripe */
+    box-sizing: border-box; /* Include padding in the width */
+    box-shadow: inset 0 1px 0 #333, /* Top inner shadow for 3D effect */
+                inset 0 -1px 0 #000, /* Bottom inner shadow for 3D effect */
+                0 0.5vh 1vh rgba(0, 0, 0, 0.5); /* Outer shadow for elevation */
+    border: 1px solid #2c2c2c; /* Border to enhance the 3D effect */
+    border-radius: 0.5vh; /* Slight border radius for smooth edges */
+}
+
+.project-title {
+    color: #070707; /* White color for the title text */
+    font-family: "Merriweather", serif; /* Updated font for the project title */
+    font-size: 1.7vh; /* Adjusted font size */
+    font-weight: bold; /* Adjusted font weight */
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margin */
+}
+
+.project-image {
+    border-radius: 1vw;
+    aspect-ratio: 4/3; /* Aspect ratio for images */
+    display: block; /* Ensure the image is a block element */
+    margin-top: 0.1vh;
+    margin-bottom: 3vh;
+    margin-right: 1vh;
+    margin-left: 1vh;
+}
+
+.project-link {
+    text-decoration: none; /* Ensure links inside project title have no underline */
+}
+
+.see-more {
+    margin-top: 0.5vh; /* Increased margin */
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0.1vh; /* Use vh for bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5vh; /* Use vh for font size */
+}
+
+.additional-info {
+    display: none; /* Hidden by default */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Overlay background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's on top */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2vh; /* Use vh for padding */
+    border-radius: 1vh; /* Use vh for border radius */
+    width: 50vw; /* Use vw for width */
+    position: relative;
+    font-size: 2vh; /* Adjusted font size */
+    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1); /* Use vh for box shadow */
+    font-family: 'Merriweather', serif; /* Updated to a more appealing font */
+}
+
+.close-modal {
+    position: absolute;
+    top: 1vh; /* Use vh for top */
+    right: 1vh; /* Use vh for right */
+    cursor: pointer;
+    font-size: 3vh; /* Use vh for font size */
+    font-weight: 300;
+    color: #fa0000; /* Close button color for better visibility */
+}
+
+.modal-body {
+    max-height: 80vh; /* Max height for modal content */
+    overflow-y: auto; /* Scroll for modal content */
+    padding: 1vh; /* Use vh for padding */
+    font-size: 2vh; /* Adjusted font size */
+    text-align: justify; /* Justify text inside the modal */
+    font-family: 'Lato', sans-serif; /* Updated to a more appealing font */
+}
+
+/* Feature Work Section Title */
+.feature-work-title {
+    font-size: 3vh; /* Larger font size for the section title */
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600; /* Increased font weight */
+    font-style: normal;
+    background: #FFC107; /* Yellow background for the stripe */
+    color: #000000; /* Black color for the text */
+    text-align: justify; /* Justify text */
+    width: calc(100% - 4vw); /* Full width */
+    box-sizing: border-box; /* Include padding in the width */
+    box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.3); /* Add shadow */
+    position: relative; /* Ensure it stretches the full width */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0; /* Remove border radius */
+}
+
+/* Animation for sections */
+.section {
+    opacity: 0;
+    transform: translateY(10vh);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Media query for large devices (above 1024px) */
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .sidebar {
+        width: 96%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 2vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+    main {
+        float: left;
+        width: 100%; /* Main content area width - Adjust if you change the sidebar width */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        box-sizing: border-box;
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */ /* Adjusted to align with the sidebar */
+        padding-top: 12vh; /* Align the top padding with the sidebar */
+    }
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 boxes per row */
+        gap: 2vw; /* Increased gap for better spacing */
+        justify-items: center;
+    }
+    
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+    
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+    
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+
+
+/* Media query for medium and small devices (below 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .sidebar {
+        width: 95.2%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 2vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+    
+    main {
+        float: left;
+        width: 100%; /* Main content area width - Adjust if you change the sidebar width */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        box-sizing: border-box;
+        margin-left: 1vw; /* Adjusted to align with the sidebar */
+        padding-top: 12vh; /* Align the top padding with the sidebar */
+    }
+     
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+        gap: 2vw; /* Increased gap for better spacing */
+        justify-items: center;
+    }
+    .modal-content {
+        width:70%; /* Use vw for width */
+    }
+     /* Ensure navigation bar items are adjusted for smaller screens */
+       nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+
+@media (max-width: 768px) and (min-width: 600px){
+.sidebar {
+    width: 95.2%; /* Adjust width to prevent overflow */
+    height: auto;
+    position: relative;
+    margin-top: 1vh;
+    margin-bottom: 1vh; /* Use vh for margin */
+    border-radius: 1vw; /* Use vw for border radius */
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    top: 10vh; /* Use vh for top margin */
+    margin-left: 1vw; /* Use vw for left margin */
+    margin-right: 2vw; /* Use vw for right margin */
+    display: flex; /* Use flexbox layout */
+    flex-direction: row; /* Column layout */
+    align-items: center; /* Center items vertically */
+}
+
+.profile-pic {
+    width: 15vw; /* Use vw for width */
+    height: 15vw; /* Use vw for height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 1vw; /* Use vw for border radius */
+    margin-right: 2vw; /* Use vw for margin */
+}
+
+.sidebar-text {
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack title and paragraph vertically */
+    width: 100%; /* Full width for text container */
+}
+
+.sidebar h2 {
+    width: 100%; /* Full width for text */
+    text-align: center; /* Center text */
+    margin-bottom: 1vh; /* Use vh for bottom margin */
+}
+
+.sidebar p {
+    width: 100%; /* Full width for text */
+    text-align: justify; /* Center text */
+    margin: 0; /* Remove margins */
+}
+
+
+
+main {
+    float: left;
+    width: 100%; /* Main content area width - Adjust if you change the sidebar width */
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    margin-left: 1vw; /* Adjusted to align with the sidebar */
+    padding-top: 12vh; /* Align the top padding with the sidebar */
+}
+
+
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    gap: 2vw; /* Increased gap for better spacing */
+    justify-items: center;
+}
+.modal-content {
+    width:90%; /* Use vw for width */
+}
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+
+    .entry h3, .timeline h3 {
+        font-size: 2vh; /* Use vh for font size */
+    }
+}
+@media (max-width: 600px) and (min-width: 500px){
+    .sidebar {
+        width: 95.2%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+    
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+    
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+    
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+    
+    
+    
+    main {
+        float: left;
+        width: 100%; /* Main content area width - Adjust if you change the sidebar width */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        box-sizing: border-box;
+        margin-left: 1vw; /* Adjusted to align with the sidebar */
+        padding-top: 12vh; /* Align the top padding with the sidebar */
+    }
+    
+    
+    
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 2 boxes per row */
+        gap: 2vw; /* Increased gap for better spacing */
+        justify-items: center;
+    }
+    .modal-content {
+        width:90%; /* Use vw for width */
+    }
+        /* Ensure navigation bar items are adjusted for smaller screens */
+        nav#navbar ul {
+            flex-direction: row; /* Keep navigation items in a row */
+            margin: 0;
+            padding: 0 1vw; /* Use vw for padding */
+        }
+    
+        nav#navbar li {
+            margin: 0 2vw; /* Use vw for margin */
+        }
+    
+        nav#navbar a {
+            font-size: 2.5vh; /* Use vh for font size */
+            padding: 1vh; /* Use vh for padding */
+        }
+    
+        .entry h3, .timeline h3 {
+            font-size: 2vh; /* Use vh for font size */
+        }
+    }
+@media (max-width: 500px){
+    .sidebar {
+        width: 95.2%; /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-top: 1vh;
+        margin-bottom: 1vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Column layout */
+        align-items: center; /* Center items vertically */
+    }
+    
+    .profile-pic {
+        width: 30vw; /* Use vw for width */
+        height: 30vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 0 auto; /* Use vw for margin */
+    }
+    
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+    
+    .sidebar h2 {
+        color: #090909;
+        font-family: 'Poetsen One', cursive; /* Distinct font for sidebar headings */
+        font-size: 2.5vh; /* Adjusted font size */
+        text-align: center;
+        word-spacing: normal;
+        margin: 1vh 0; /* Use vh for margin */
+    }
+    
+    .sidebar p {
+        color: #050505;
+        font-family: 'Lato', sans-serif;
+        font-size: 2vh; /* Adjusted font size */
+        text-align: justify;
+        margin: 1vh 0; /* Use vh for margin */
+    }
+    
+
+    main {
+        float: left;
+        width: 100%; /* Main content area width - Adjust if you change the sidebar width */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        box-sizing: border-box;
+        margin-left: 1vw; /* Adjusted to align with the sidebar */
+        padding-top: 12vh; /* Align the top padding with the sidebar */
+    }
+    
+    .project-gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* 1 box per row */
+        gap: 2vw; /* Increased gap for better spacing */
+        justify-items: center;
+    }
+    .modal-content {
+        width:90%; /* Use vw for width */
+    }
+    
+        /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+

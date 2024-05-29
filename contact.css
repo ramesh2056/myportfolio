@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+
+/* General body and HTML styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+    font-family: 'Roboto', sans-serif;
+    background: #101820;  /* Dark gradient background */
+}
+
+/* Header and Navigation Bar */
+header {
+    background: url('navigation3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    position: fixed;  /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;  /* Ensure the header is above other content */
+}
+
+nav#navbar {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar li {
+    margin: 0 2vw; /* Use vw for margin */
+}
+
+nav#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3vh; /* Increase icon font size using vh */
+    padding: 1.5vh; /* Use vh for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif; /* Updated font for attractiveness */
+}
+
+nav#navbar a:hover, nav#navbar a:focus {
+    background-color: #575757;
+    border-radius: 1vw; /* Use vw for border radius */
+    transition: background-color 0.3s;
+}
+
+.social-icon .fab.fa-facebook-f { color: #3b5998; }
+.social-icon .fab.fa-instagram { color: #e4405f; }
+.social-icon .fab.fa-linkedin-in { color: #0077b5; }
+.social-icon .fab.fa-google { color: #db4437; }
+
+/* Sidebar */
+.sidebar {
+    background: url('b12.webp');
+    background-size: cover;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18vw; /* Use vw for width */
+    border-radius: 2vw;  /* Use vw for border radius */
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.1); /* Use vh for box shadow */
+    position: fixed;
+    top: 12vh;  /* Use vh for top margin */
+    left: 1vw; /* Use vw for left margin */
+    transition: top 0.3s;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 12vw; /* Use vw for width */
+    height: 12vw; /* Use vw for height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 50%; /* Optional: to make it a circular profile picture */
+    margin: 0 auto; /* Center the picture by auto margins */
+}
+
+.sidebar h2 {
+    color: #090909;
+    font-family: 'Merriweather', serif; /* Distinct font for sidebar headings */
+    font-size: 3vh; /* Use vh for font size */
+    text-align: center;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+.sidebar p {
+    color: #050505;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8vh; /* Use vh for font size */
+    text-align: justify;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    width: 83%; /* Use vw for width */
+    margin-left: 18vw; /* Use vw for left margin */
+    margin-top: 6vh; /* Use vh for top margin */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw; /* Use vw for gap */
+}
+
+.section-title {
+    font-size: 5vh; /* Use vh for font size */
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffe0;
+    margin-bottom: 2vh; /* Use vh for margin-bottom */
+    padding-bottom: 1vh; /* Use vh for padding-bottom */
+    border-bottom: 0.3vh solid #fdcb02; /* Use vh for border-bottom */
+    display: flex;
+    margin-top: 3vh;
+    align-items: center;
+}
+
+.section-title i {
+    margin-right: 1vw; /* Use vw for margin-right */
+}
+
+.social-media, .research-profile, .faqs, .contact-form {
+    background: #FFFAE6;
+    font-size: 2.5vh;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    border-radius: 2vw; /* Use vw for border-radius */
+    box-shadow: 0 2vh 4vh rgba(254, 246, 246, 0.1); /* Use vh for box-shadow */
+}
+
+.social-media h3, .research-profile h3, .faqs h3, .contact-form h3 {
+    color: #fb0707;
+    margin-bottom: 1vh; /* Use vh for margin-bottom */
+}
+
+.social-icon, .research-icon {
+    font-size: 2vh; /* Use vh for font size */
+    color: rgb(7, 14, 243);
+    margin: 1vh; /* Use vh for margin */
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* No underline for social media */
+}
+
+.social-icon i, .research-icon i {
+    margin-right: 1vw; /* Use vw for margin-right */
+}
+
+.faq-item {
+    margin-bottom: 2vh; /* Use vh for margin-bottom */
+}
+
+.faq-item h4 {
+    margin: 1vh 0; /* Use vh for margin */
+    font-size: 2.5vh; /* Use vh for font size */
+    color: #e00404;
+}
+
+.faq-item p {
+    margin: 1vh 0; /* Use vh for margin */
+    font-size: 2.5vh; /* Use vh for font size */
+    color: #040404;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 1.5vh; /* Use vh for margin-bottom */
+    padding: 1.5vh; /* Use vh for padding */
+    border: 0.1vh solid #ddd; /* Use vh for border */
+    border-radius: 1vh; /* Use vh for border-radius */
+    font-size: 2vh; /* Use vh for font size */
+    font-family: 'Lato', sans-serif; /* Updated to a more appealing font */
+}
+
+.contact-form button {
+    background: #DC2424;
+    color: #fff;
+    padding: 1.5vh 2vw; /* Use vh and vw for padding */
+    border: none;
+    border-radius: 1vh; /* Use vh for border-radius */
+    font-size: 2vh; /* Use vh for font size */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #C0392B;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5vh 0; /* Use vh for padding */
+    background: #333;
+    color: #fff;
+    width: 100%;
+    position: relative; /* Changed to relative to allow scrolling */
+}
+
+/* Media Queries */
+/* Media query for screen sizes below 1440px (75%) */
+@media (max-width: 1440px) and (min-width: 500px) {
+    .sidebar {
+        width: calc(100% - 5vw); /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 2vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Justify text */
+        margin: 0; /* Remove margins */
+    }
+
+    main {
+        flex: 1;
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        box-sizing: border-box;
+        width: 100%; /* Use vw for width */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-top: 8vh; /* Use vh for top margin */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: calc(100% - 5vw); /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 2vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Arrange items in a column */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .profile-pic {
+        width: 30vw; /* Use vw for width */
+        height: 30vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin: 0 auto; /* Center the profile picture horizontally */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Justify text */
+        margin: 0; /* Remove margins */
+    }
+
+    .contact-info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2vw; /* Use vw for gap */
+    }
+
+    main {
+        flex: 1;
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        box-sizing: border-box;
+        width: 100%; /* Use vw for width */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-top: 8vh; /* Use vh for top margin */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+}

@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&display=swap');
+
+/* General body and HTML styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Prevent horizontal overflow */
+    font-family: 'Lato', sans-serif;
+    background: #101820;  /* Dark gradient background */
+}
+
+/* Header and Navigation Bar */
+header {
+    background: url('navigation3.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    position: fixed;  /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1000;  /* Ensure the header is above other content */
+}
+
+nav#navbar {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+nav#navbar li {
+    margin: 0 2vw; /* Use vw for margin */
+}
+
+nav#navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3vh; /* Increase icon font size using vh */
+    padding: 1.5vh; /* Use vh for padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav#navbar a:hover, nav#navbar a:focus {
+    background-color: #575757;
+    border-radius: 1vw; /* Use vw for border radius */
+    transition: background-color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+    background: url('b12.webp');
+    background-size: cover;
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 18vw; /* Use vw for width */
+    border-radius: 2vw;  /* Use vw for border radius */
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.1); /* Use vh for box shadow */
+    position: absolute;
+    top: 12vh;  /* Use vh for top margin */
+    left: 1vw; /* Use vw for left margin */
+    right: 5vw; /* Ensures no overflow on the right */
+    transition: top 0.3s;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 12vw; /* Use vw for width */
+    height: 12vw; /* Use vw for height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    border-radius: 50%; /* Optional: to make it a circular profile picture */
+    margin: 0 auto; /* Center the picture by auto margins */
+}
+
+.sidebar h2 {
+    color: #090909;
+    font-family: 'Merriweather', serif; /* Distinct font for sidebar headings */
+    font-size: 3vh; /* Use vh for font size */
+    text-align: center;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+.sidebar p {
+    color: #050505;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.8vh; /* Use vh for font size */
+    text-align: justify;
+    margin: 1vh 0; /* Use vh for margin */
+}
+
+.download-cv-btn {
+    background-color: red;
+    color: #fff;
+    text-decoration: none;
+    padding: 1vh 2vw; /* Use vh and vw for padding */
+    border-radius: 1vw; /* Use vw for border radius */
+    font-size: 2vh; /* Use vh for font size */
+    font-weight: bold;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.2); /* Use vh for box shadow */
+    margin-top: 1.5vh; /* Use vh for margin */
+    display: inline-block; /* Ensure the button is treated as an inline-block element */
+}
+
+/* Main Content */
+main {
+    padding: 2vh 2vw; /* Use vh and vw for padding */
+    box-sizing: border-box;
+    width: 82vw; /* Use vw for width */
+    margin-left: 18vw; /* Use vw for left margin */
+    margin-top: 8vh;  /* Use vh for top margin */
+}
+
+.work, .timeline, .interests-list, .online-course, .certificate, .relevant-course, .skills, .languages {
+    background-color: #222;
+    color: #fff;
+    padding: 2vh; /* Use vh for padding */
+    border-radius: 1vw; /* Use vw for border radius */
+    margin-bottom: 2vh; /* Use vh for bottom margin */
+    font-family: 'Merriweather', serif; /* Update font family */
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding: 0vh 0;
+    margin: 2vh 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0.1vw; /* Adjusted to vw */
+    background: #ffc107;
+    left: 1.445vw; /* Adjusted to vw */
+    margin: 0;
+}
+
+.timeline-item {
+    margin: 0 0 2vh 4vw; /* Adjusted to vh and vw */
+    padding: 1vh;
+    position: relative;
+}
+
+.timeline-item .timeline-icon {
+    position: absolute;
+    left: -3vw; /* Adjusted to vw */
+    top: 2.3vh; /* Adjusted to vh */
+    width: 1vw; /* Adjusted to vw */
+    height: 1vw; /* Adjusted to vw */
+    background: #ffd104;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.4vw #ffffff; /* Adjusted to vw */
+}
+
+.timeline-item .timeline-content {
+    padding: 1vh;
+    background: #333;
+    border-radius: 0.5vw; /* Adjusted to vw */
+}
+
+.timeline-item .timeline-content h3 {
+    margin: 0 0 1vh;
+    color: #ffffff;
+    font-size: 2vh;
+    font-family: 'Lato', sans-serif; /* Update font family */
+    font-weight: bold;
+}
+
+.timeline-item .timeline-content p {
+    margin: 0 0 1vh;
+    font-size: 2vh;
+    color: #bbb;
+    font-family: 'Lato', sans-serif; /* Update font family */
+}
+
+.timeline-item .timeline-content p b {
+    font-size: 2vh;
+    color: #f8f7f7;
+}
+
+.work li,.entry li, .interests-list li, .online-course li, .certificate li, .relevant-course li, .skills li, .languages li {
+    margin-bottom: 1vh; /* Use vh for bottom margin */
+    font-size: 2vh; /* Use vh for font size */
+    line-height: 1.2;
+    list-style: none;
+    padding-left: 2vw; /* Use vw for padding */
+    position: relative;
+    font-family: 'Lato', sans-serif; /* Update font family */
+}
+
+.work li::before,.entry li::before, .interests-list li::before, .online-course li::before, .certificate li::before,
+.relevant-course li::before, .skills li::before, .languages li::before {
+    content: '•';
+    color: #888;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    font-size: 1.8vh; /* Use vh for font size */
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 1vh; /* Use vh for bottom margin */
+    border-left: 0.3vw solid yellow; /* Use vw for border */
+    padding-left: 1vw; /* Use vw for padding */
+}
+
+/* Section Headings */
+.section h2 {
+    font-size: 3vh; /* Use vh for font size */
+    font-family: "Merriweather", serif; /* Update font family */
+    color: #ffffe0; /* Light yellow color for contrast */
+    margin-bottom: 1vh; /* Use vh for bottom margin */
+    display: flex;
+    align-items: center;
+    position: relative;  /* Ensure the underline positions correctly */
+}
+
+.section h2 i {
+    margin-right: 1vw; /* Adjusted to vw */
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0.3vh; /* Use vh for height */
+    background-color: yellow;
+    position: absolute;
+    bottom: -1vh;  /* Position below the heading */
+    left: 0;
+}
+
+/* Section styles */
+.section {
+    opacity: 0;
+    transform: translateY(1vh);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Media Queries */
+/* Media query for screen sizes below 1440px (75%) */
+@media (max-width: 1440px) and (min-width: 1024px) {
+    .sidebar {
+        width: calc(100% - 5vw); /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+
+    .download-cv-btn {
+        text-align: center;
+        margin: 1vh 0; /* Use vh for margin */
+        margin-top: 1vh; /* Use vh for top margin */
+        padding: 0.8vh 1.6vw; /* Use vh and vw for padding */
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        margin-top: 8vh;  /* Use vh for top margin */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+
+    .entry h3, .timeline h3 {
+        font-size: 2vh; /* Use vh for font size */
+    }
+}
+
+/* Media query for screen sizes below 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .sidebar {
+        width: calc(100% - 5vw); /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+
+    .download-cv-btn {
+        text-align: center;
+        margin: 1vh 0; /* Use vh for margin */
+        margin-top: 1vh; /* Use vh for top margin */
+        padding: 0.8vh 1.6vw; /* Use vh and vw for padding */
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        margin-top: 8vh;  /* Use vh for top margin */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+
+    .entry h3, .timeline h3 {
+        font-size: 2vh; /* Use vh for font size */
+    }
+}
+
+/* Media query for screen sizes below 768px and above 500px */
+@media (max-width: 768px) and (min-width: 500px) {
+    .sidebar {
+        width: calc(100% - 5vw); /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: row; /* Keep items in a row */
+        align-items: center; /* Center items vertically */
+    }
+
+    .profile-pic {
+        width: 15vw; /* Use vw for width */
+        height: 15vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 2vw; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+
+    .download-cv-btn {
+        text-align: center;
+        margin: 1vh 0; /* Use vh for margin */
+        margin-top: 1vh; /* Use vh for top margin */
+        padding: 0.8vh 1.6vw; /* Use vh and vw for padding */
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        margin-top: 8vh;  /* Use vh for top margin */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+
+    .entry h3, .timeline h3 {
+        font-size: 2vh; /* Use vh for font size */
+    }
+}
+
+/* Media query for screen sizes below 500px */
+@media (max-width: 500px) {
+    .sidebar {
+        width: calc(100% - 5vw); /* Adjust width to prevent overflow */
+        height: auto;
+        position: relative;
+        margin-bottom: 2vh; /* Use vh for margin */
+        border-radius: 1vw; /* Use vw for border radius */
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        top: 10vh; /* Use vh for top margin */
+        margin-left: 1vw; /* Use vw for left margin */
+        margin-right: 2vw; /* Use vw for right margin */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .profile-pic {
+        width: 30vw; /* Use vw for width */
+        height: 30vw; /* Use vw for height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+        border-radius: 1vw; /* Use vw for border radius */
+        margin-right: 0 auto; /* Use vw for margin */
+    }
+
+    .sidebar-text {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack title and paragraph vertically */
+        width: 100%; /* Full width for text container */
+    }
+
+    .sidebar h2 {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        margin-bottom: 1vh; /* Use vh for bottom margin */
+    }
+
+    .sidebar p {
+        width: 100%; /* Full width for text */
+        text-align: justify; /* Center text */
+        margin: 0; /* Remove margins */
+    }
+
+    .download-cv-btn {
+        text-align: center;
+        margin: 1vh 0; /* Use vh for margin */
+        margin-top: 1vh; /* Use vh for top margin */
+        padding: 0.8vh 1.6vw; /* Use vh and vw for padding */
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+        padding: 2vh 2vw; /* Use vh and vw for padding */
+        margin-top: 8vh;  /* Use vh for top margin */
+    }
+
+    /* Ensure navigation bar items are adjusted for smaller screens */
+    nav#navbar ul {
+        flex-direction: row; /* Keep navigation items in a row */
+        margin: 0;
+        padding: 0 1vw; /* Use vw for padding */
+    }
+
+    nav#navbar li {
+        margin: 0 2vw; /* Use vw for margin */
+    }
+
+    nav#navbar a {
+        font-size: 2.5vh; /* Use vh for font size */
+        padding: 1vh; /* Use vh for padding */
+    }
+
+    .entry h3, .timeline h3 {
+        font-size: 2vh; /* Use vh for font size */
+    }
+}
