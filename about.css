@@ -66,7 +66,7 @@ nav#navbar a:hover, nav#navbar a:focus {
 
 /* Sidebar */
 .sidebar {
-    background: url('b12.webp');
+    background: url('b12.jpeg');
     background-size: cover;
     padding: 2vh 2vw; /* Use vh and vw for padding */
     box-sizing: border-box;
